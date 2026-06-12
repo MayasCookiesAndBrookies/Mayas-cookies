@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya's Homemade Cookies & Brookies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .cookie-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .cookie-card:hover { transform: scale(1.02); cursor: pointer; }
+        .hidden-content { transition: max-height 0.5s ease-out, opacity 0.5s ease; max-height: 0; opacity: 0; overflow: hidden; }
+        .show { max-height: 800px; opacity: 1; }
+    </style>
+</head>
+<body class="bg-rose-50 text-rose-950 antialiased">
+
+    <nav class="bg-white/80 backdrop-blur-md p-6 sticky top-0 z-50 shadow-sm border-b border-rose-100">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tight">Maya's <span class="text-rose-500">Cookies & Brookies</span></h1>
+            <div class="space-x-6 text-sm font-medium text-rose-700">
+                <a href="#" class="hover:text-rose-500">Treats</a>
+                <a href="#" class="hover:text-rose-500">About</a>
+                <a href="#" class="bg-rose-500 text-white px-4 py-2 rounded-full hover:bg-rose-600">Order Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-20 px-6 text-center">
+        <h2 class="text-6xl font-extrabold mb-4 text-rose-950">Baked with Love.</h2>
+        <p class="text-xl text-rose-700 max-w-xl mx-auto">Fresh, homemade cookies delivered to you. Click a cookie to see the ingredients!</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-20">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Cookie 1: Strawberry Shortcake -->
+            <div class="cookie-card bg-white p-4 rounded-3xl shadow-lg border border-rose-100" onclick="toggleDetails('strawberry-info')">
+                <img src="IMG_0116.jpeg" alt="Strawberry Shortcake" class="rounded-2xl w-full h-72 object-cover mb-4">
+                <h3 class="text-xl font-bold mb-1">Strawberry Shortcake</h3>
+                <p class="text-rose-500 text-sm font-medium mb-4">Click to view ingredients</p>
+                <div id="strawberry-info" class="hidden-content bg-rose-50 p-4 rounded-xl text-sm text-rose-800 border-l-4 border-rose-400">
+                    <p class="mb-2"><strong>Base:</strong> All-purpose flour, cornstarch, baking soda, baking powder, salt, butter, granulated sugar, brown sugar, eggs, vanilla extract.</p>
+                    <p><strong>Toppings:</strong> White frosting (butter, powdered sugar, vanilla), fresh strawberry halves, crushed shortbread or golden sandwich cookies.</p>
+                </div>
+            </div>
+
+            <!-- Cookie 2: Frosted Strawberry -->
+            <div class="cookie-card bg-white p-4 rounded-3xl shadow-lg border border-rose-100" onclick="toggleDetails('frosted-strawberry-info')">
+                <img src="IMG_0124.jpeg" alt="Frosted Strawberry" class="rounded-2xl w-full h-72 object-cover mb-4">
+                <h3 class="text-xl font-bold mb-1">Frosted Strawberry</h3>
+                <p class="text-rose-500 text-sm font-medium mb-4">Click to view ingredients</p>
+                <div id="frosted-strawberry-info" class="hidden-content bg-rose-50 p-4 rounded-xl text-sm text-rose-800 border-l-4 border-rose-400">
+                    <p class="mb-2"><strong>Base:</strong> All-purpose flour, cornstarch, baking soda, baking powder, salt, butter, granulated sugar, brown sugar, eggs, vanilla extract, freeze-dried strawberries or strawberry emulsion.</p>
+                    <p><strong>Topping:</strong> White frosting (butter, powdered sugar, vanilla).</p>
+                </div>
+            </div>
+
+            <!-- Cookie 3: Cookies and Cream -->
+            <div class="cookie-card bg-white p-4 rounded-3xl shadow-lg border border-rose-100" onclick="toggleDetails('cookies-cream-info')">
+                <img src="IMG_0120.jpeg" alt="Cookies and Cream" class="rounded-2xl w-full h-72 object-cover mb-4">
+                <h3 class="text-xl font-bold mb-1">Cookies and Cream</h3>
+                <p class="text-rose-500 text-sm font-medium mb-4">Click to view ingredients</p>
+                <div id="cookies-cream-info" class="hidden-content bg-rose-50 p-4 rounded-xl text-sm text-rose-800 border-l-4 border-rose-400">
+                    <p class="mb-2"><strong>Base:</strong> All-purpose flour, cornstarch, baking soda, baking powder, salt, butter, granulated sugar, brown sugar, eggs, vanilla extract.</p>
+                    <p><strong>Toppings:</strong> Melted white chocolate (for drizzle), dark chocolate sandwich cookies (crumbled and whole).</p>
+                </div>
+            </div>
+
+            <!-- Cookie 4: Chocolate Peanut Butter -->
+            <div class="cookie-card bg-white p-4 rounded-3xl shadow-lg border border-rose-100" onclick="toggleDetails('pb-info')">
+                <img src="IMG_0119.jpeg" alt="Chocolate Peanut Butter" class="rounded-2xl w-full h-72 object-cover mb-4">
+                <h3 class="text-xl font-bold mb-1">Chocolate Peanut Butter</h3>
+                <p class="text-rose-500 text-sm font-medium mb-4">Click to view ingredients</p>
+                <div id="pb-info" class="hidden-content bg-rose-50 p-4 rounded-xl text-sm text-rose-800 border-l-4 border-rose-400">
+                    <p class="mb-2"><strong>Base:</strong> All-purpose flour, cornstarch, baking soda, baking powder, salt, butter, granulated sugar, brown sugar, eggs, vanilla extract, semisweet chocolate chips.</p>
+                    <p><strong>Toppings:</strong> Chocolate-covered peanut butter cups, melted semisweet chocolate (for drizzle).</p>
+                </div>
+            </div>
+
+            <!-- Cookie 5: Frosted Chocolate -->
+            <div class="cookie-card bg-white p-4 rounded-3xl shadow-lg border border-rose-100" onclick="toggleDetails('frosted-choc-info')">
+                <img src="IMG_0126.jpeg" alt="Frosted Chocolate" class="rounded-2xl w-full h-72 object-cover mb-4">
+                <h3 class="text-xl font-bold mb-1">Frosted Chocolate</h3>
+                <p class="text-rose-500 text-sm font-medium mb-4">Click to view ingredients</p>
+                <div id="frosted-choc-info" class="hidden-content bg-rose-50 p-4 rounded-xl text-sm text-rose-800 border-l-4 border-rose-400">
+                    <p class="mb-2"><strong>Base:</strong> All-purpose flour, cornstarch, baking soda, baking powder, salt, butter, granulated sugar, brown sugar, eggs, vanilla extract, cocoa powder.</p>
+                    <p><strong>Toppings:</strong> White frosting (butter, powdered sugar, vanilla), crumbled dark chocolate sandwich cookies.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function toggleDetails(id) {
+            const content = document.getElementById(id);
+            // Close other open sections first
+            document.querySelectorAll('.hidden-content').forEach(item => {
+                if (item.id !== id) item.classList.remove('show');
+            });
+            // Toggle clicked section
+            content.classList.toggle('show');
+        }
+    </script>
+
+    <footer class="text-center py-10 text-rose-400 text-sm">
+        <p>&copy; 2026 Maya's Homemade Cookies & Brookies. Baked fresh daily.</p>
+    </footer>
+
+</body>
+</html>
